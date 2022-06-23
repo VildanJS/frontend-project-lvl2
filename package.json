@@ -3,11 +3,20 @@
   "type": "module",
   "version": "1.0.0",
   "description": "abstract tree",
+  "main": "index.js",
   "bin": {
-    "gendiff": "index.js"
+    "gendiff": "bin/gendiff.js"
   },
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "wallaby": {
+    "env": {
+      "type": "node",
+      "params": {
+        "runner": "--experimental-vm-modules"
+      }
+    }
   },
   "repository": {
     "type": "git",
@@ -22,6 +31,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.18.2",
     "babel-jest": "^28.1.1",
+    "babel-plugin-transform-import-meta": "^2.2.0",
     "eslint": "^8.18.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.26.0",
@@ -31,6 +41,7 @@
     "jest": "^28.1.1"
   },
   "dependencies": {
+    "@babel/core": "^7.18.5",
     "commander": "^9.3.0",
     "eslint-plugin-jest": "^26.5.3",
     "lodash": "^4.17.21"
