@@ -15,3 +15,12 @@ test('JSON', () => {
       + '  + timeout: 20\n'
       + '  + verbose: true\n');
 });
+test('YAML', () => {
+  expect(genDiff(getFixturesPath('file1.yml'), getFixturesPath('file2.yaml')))
+    .toEqual('  - follow: false\n'
+      + '    host: hexlet.io\n'
+      + '  - proxy: 123.234.53.22\n'
+      + '  - timeout: 50\n'
+      + '  + timeout: 20\n'
+      + '  + verbose: true\n');
+});

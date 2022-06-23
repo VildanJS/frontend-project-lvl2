@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import _ from 'lodash';
+import jsYaml from 'js-yaml';
 
 const resolvePath = (filePath) => {
   const currentDirectory = process.cwd();
@@ -10,9 +11,17 @@ const resolvePath = (filePath) => {
 const readData = (filePath) => {
   const resolvedPath = resolvePath(filePath);
   const data = fs.readFileSync(resolvedPath, 'utf8');
-  return JSON.parse(data);
+  const extension = path.extname(filePath).replace(/\./, '');
+  switch (extension) {
+    case 'yml':
+    case 'yaml':
+      return jsYaml.load(data);
+    case 'json':
+      return JSON.parse(data);
+    default:
+      return data;
+  }
 };
-
 const helper = (val1, val2, key) => {
   const isDefined1 = !_.isUndefined(val1);
   const isDefined2 = !_.isUndefined(val2);
@@ -27,7 +36,6 @@ const helper = (val1, val2, key) => {
     return ` + ${key}: ${val2}\n`;
   } return '';
 };
-
 const genDiff = (filePath1, filePath2) => {
   const data1 = readData(filePath1);
   const data2 = readData(filePath2);
