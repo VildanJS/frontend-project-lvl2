@@ -26,15 +26,17 @@ const helper = (val1, val2, key) => {
   const isDefined1 = !_.isUndefined(val1);
   const isDefined2 = !_.isUndefined(val2);
   const isEqual = val1 === val2;
+  let result;
   if (isEqual) {
-    return `   ${key}: ${val1}\n`;
-  } if (isDefined1 && isDefined2) {
-    return ` - ${key}: ${val1}\n  + ${key}: ${val2}\n`;
-  } if (isDefined1) {
-    return ` - ${key}: ${val1}\n`;
-  } if (isDefined2) {
-    return ` + ${key}: ${val2}\n`;
-  } return '';
+    result = `   ${key}: ${val1}\n`;
+  } else if (isDefined1 && isDefined2) {
+    result = ` - ${key}: ${val1}\n  + ${key}: ${val2}\n`;
+  } else if (isDefined1) {
+    result = ` - ${key}: ${val1}\n`;
+  } else if (isDefined2) {
+    result = ` + ${key}: ${val2}\n`;
+  }
+  return result;
 };
 const genDiff = (filePath1, filePath2) => {
   const data1 = readData(filePath1);
