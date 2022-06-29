@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-const strigify = (value) => {
+const stringify = (value) => {
   if (_.isObject(value)) {
     return '[complex value]';
   }
@@ -27,11 +27,11 @@ export default (tree) => {
         case 'unchanged':
           return null;
         case 'changed':
-          return `Property '${newPath.join('.')}' was updated. From ${strigify(oldValue)} to ${strigify(value)}`;
+          return `Property '${newPath.join('.')}' was updated. From ${stringify(oldValue)} to ${stringify(value)}`;
         case 'deleted':
           return `Property '${newPath.join('.')}' was removed`;
         case 'added':
-          return `Property '${newPath.join('.')}' was added with value: ${strigify(value)}`;
+          return `Property '${newPath.join('.')}' was added with value: ${stringify(value)}`;
         default:
           throw new Error(`Wrong status ${status}`);
       }
