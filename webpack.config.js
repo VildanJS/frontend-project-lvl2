@@ -4,11 +4,11 @@ module.exports = {
   mode: 'production',
   target: 'node',
   entry: {
-    gendiff: path.resolve(__dirname, 'src', 'gendiff.ts'),
+    gendiff: path.resolve(__dirname, 'src', 'bin', 'gendiff.ts'),
   },
   output: {
     filename: '[name].js',
-    path: `${__dirname}/dist`,
+    path: `${__dirname}/dist/bin`,
     library: {
       type: 'commonjs',
     },
