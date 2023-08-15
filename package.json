@@ -1,6 +1,6 @@
 {
   "name": "@hexlet/code",
-  "main": "src/index.ts",
+  "main": "dist/index.ts",
   "bin": {
     "gendiff": "dist/bin/gendiff.js"
   },
