@@ -1,5 +1,6 @@
+#!/usr/bin/env node
 import { Command } from '@commander-js/extra-typings';
-import { genDiff } from '../index';
+import genDiff from '../index';
 import { Formatters } from '../types';
 
 const program = new Command();

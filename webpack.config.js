@@ -1,11 +1,11 @@
 const path = require('path');
-
+const ShebangPlugin = require('webpack-shebang-plugin');
 module.exports = {
   mode: 'production',
   target: 'node',
   entry: {
-    index: path.resolve(__dirname, 'src', 'index.ts'),
-    gendiff: path.resolve(__dirname, 'src', 'bin', 'gendiff.ts'),
+    "index": "./src/index.ts",
+    "bin/gendiff": "./src/bin/gendiff.ts"
   },
   output: {
     filename: '[name].js',
@@ -26,4 +26,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.ts', '.json'],
   },
+  plugins: [
+    new ShebangPlugin(),
+  ],
 };
