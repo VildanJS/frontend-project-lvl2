@@ -1,5 +1,6 @@
 const path = require('path');
 const ShebangPlugin = require('webpack-shebang-plugin');
+
 module.exports = {
   mode: 'production',
   target: 'node',
@@ -10,9 +11,6 @@ module.exports = {
   output: {
     filename: '[name].js',
     path: `${__dirname}/dist`,
-    library: {
-      type: 'commonjs',
-    },
   },
   module: {
     rules: [

@@ -21,5 +21,3 @@ export default function getDiff(filepath1: string, filepath2: string, format: Fo
   const diffObj = getDiffObj(objFromSource1, objFromSource2);
   return makeFormat(diffObj, format);
 }
-
-console.log('!!!!!!!!!');
