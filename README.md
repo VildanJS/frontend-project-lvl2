@@ -1,8 +1,7 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/VildanJS/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/VildanJS/frontend-project-lvl2/actions)
-
+[![NodeCI](https://github.com/VildanJS/frontend-project-lvl2/actions/workflows/Github-Actions.yml/badge.svg)](https://github.com/VildanJS/frontend-project-lvl2/actions/workflows/Github-Actions.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/2aed6a559b72da8789d4/maintainability)](https://codeclimate.com/github/Giridhar108/frontend-project-lvl2/maintainability)
-
 [![Test Coverage](https://api.codeclimate.com/v1/badges/2aed6a559b72da8789d4/test_coverage)](https://codeclimate.com/github/Giridhar108/frontend-project-lvl2/test_coverage)
 
 # Учебный проект
@@ -59,7 +58,7 @@ Options:
 * JSON
 
 Используйте -f или --format флаг чтобы вывести информацию в нужном формате.
-`./bin/gendiff.js before.json after.json --format plain`
+`./bin/gendiff.js ./before.json ./after.json --format plain`
 
 Чтобы использовать утилиту напрямую, как показано в примере ниже.
 Необходимо выполнить в терминале: npm link
