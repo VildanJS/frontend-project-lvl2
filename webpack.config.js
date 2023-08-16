@@ -5,12 +5,14 @@ module.exports = {
   mode: 'production',
   target: 'node',
   entry: {
-    "index": "./src/index.ts",
-    "bin/gendiff": "./src/bin/gendiff.ts"
+    index: './src/index.ts',
+    'bin/gendiff': './src/bin/gendiff.ts',
   },
   output: {
     filename: '[name].js',
     path: `${__dirname}/dist`,
+    library: 'gendiff-wrapper',
+    libraryTarget: 'umd',
   },
   module: {
     rules: [
