@@ -11,8 +11,7 @@ module.exports = {
   output: {
     filename: '[name].js',
     path: `${__dirname}/dist`,
-    library: 'gendiff-wrapper',
-    libraryTarget: 'umd',
+    libraryTarget: 'commonjs2',
   },
   module: {
     rules: [
