@@ -1,6 +1,0 @@
-{
-  "plugins": [
-    "@babel/preset-env",
-    "@babel/preset-typescript"
-  ]
-}

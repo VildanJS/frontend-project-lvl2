@@ -15,6 +15,7 @@ ignorePatterns:
   - 'project/code/dist/*'
 plugins:
   - 'import'
+  - 'fp'
 overrides:
     - files:
       - '*.ts'

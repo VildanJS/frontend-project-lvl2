@@ -1,8 +1,9 @@
 const ShebangPlugin = require('webpack-shebang-plugin');
+const webpack = require('webpack');
 
 // eslint-disable-next-line fp/no-mutation
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   target: 'node',
   entry: {
     index: './src/index.ts',
@@ -29,5 +30,10 @@ module.exports = {
   },
   plugins: [
     new ShebangPlugin(),
+    new webpack.BannerPlugin({
+      banner: '/* eslint-ignore */',
+      raw: true,
+      entryOnly: true,
+    }),
   ],
 };
