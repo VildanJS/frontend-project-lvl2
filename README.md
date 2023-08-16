@@ -42,7 +42,7 @@ Options:
   -h, --help           output usage information
 ```
 
-## ⚙️ Запуск утилиты
+## 🚀 Запуск утилиты
 
 ```bash
 ./bin/gendiff.js ./before.json ./after.json
