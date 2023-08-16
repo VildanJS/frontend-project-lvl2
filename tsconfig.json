@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
     "types": ["node", "jest"],
-    "target": "ESNext",                   // компилировать в es6
+    "target": "ES5",                      // компилировать в es5
     "moduleResolution": "Node",           // по умолчанию импорт по правилам node
-    "module": "ESNext",                   // правило для модулей
+    "module": "CommonJS",                 // правило для модулей
     "strict": true,                       // запрет null и undefined в иерархии типов, и.тд.
     "esModuleInterop": true,              // включает import
     "noImplicitAny": true,                // запретить не явное Any
     "allowJs": true,                      // разрешить JS
+    "allowSyntheticDefaultImports": true
   },
   "ts-node": {
     "esm": true,                                    // позволяет запускать файлы без флага esm

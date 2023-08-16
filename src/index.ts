@@ -6,7 +6,7 @@ import { getDiffObj } from './getDiffObj';
 import { makeFormat } from './formatters';
 import { Formatters } from './types';
 
-export default function getDiff(filepath1: string, filepath2: string, format: Formatters = 'stylish') {
+function getDiff(filepath1: string, filepath2: string, format: Formatters = 'stylish') {
   const extname1 = path.extname(path.basename(filepath1)).slice(1);
   const extname2 = path.extname(path.basename(filepath1)).slice(1);
 
@@ -21,3 +21,4 @@ export default function getDiff(filepath1: string, filepath2: string, format: Fo
   const diffObj = getDiffObj(objFromSource1, objFromSource2);
   return makeFormat(diffObj, format);
 }
+export default getDiff;
