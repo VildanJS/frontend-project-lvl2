@@ -11,6 +11,8 @@ module.exports = {
   output: {
     filename: '[name].js',
     path: `${__dirname}/dist`,
+    library: 'myLibNamespace',
+    libraryExport: 'default',
     libraryTarget: 'umd',
   },
   module: {
