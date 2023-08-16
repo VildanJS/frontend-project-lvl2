@@ -1,6 +1,6 @@
 const ShebangPlugin = require('webpack-shebang-plugin');
 
-// eslint-disable-next-line fp/no-mutation off
+// eslint-disable-next-line fp/no-mutation
 module.exports = {
   mode: 'production',
   target: 'node',
