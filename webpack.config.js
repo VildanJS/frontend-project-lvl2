@@ -1,4 +1,3 @@
-const path = require('path');
 const ShebangPlugin = require('webpack-shebang-plugin');
 
 module.exports = {

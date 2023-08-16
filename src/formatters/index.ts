@@ -1,7 +1,7 @@
 import { stylish } from './stylish';
 import { plain } from './plain';
 import { DiffElement, Formatters } from '../types';
-import {stringify} from "./stringify";
+import { stringify } from './stringify';
 
 export const makeFormat = (data: { [key: string]: DiffElement }, formatter: Formatters) => {
   let res = '';
