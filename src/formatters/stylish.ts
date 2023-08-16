@@ -1,5 +1,5 @@
 import { isObject } from '../utils';
-import { DiffElement } from '../types';
+import { DiffElement, IterElement } from '../types';
 
 const getIndent = (depth: number, replacer = ' ') => replacer.repeat(depth * 2);
 const getMinusIndent = (depth: number, replacer = ' ') => replacer.repeat(depth * 2 - 2);
@@ -27,7 +27,7 @@ const renderLine = (key: string, value: any, depth: number, type: keyof typeof P
   const spacer = getIndent(depth);
   return `${spacer}${Prefix[type]} ${key}: ${renderElement(value, depth + 2)}`;
 };
-const iter = (diffObj: { [key: string]: DiffElement }, depth = 1) => {
+const iter = (diffObj: IterElement, depth = 1) => {
   const spacer = getIndent(depth);
   const plusSpacer = getPlusIndent(depth);
 

@@ -5,4 +5,7 @@ interface DiffElement {
   children?: { [key: string]: DiffElement }
 }
 type Formatters = 'plain' | 'stylish' | 'json';
-export { DiffElement, Formatters };
+
+type IterElement = DiffElement | { [key: string]: DiffElement };
+
+export { DiffElement, Formatters, IterElement };

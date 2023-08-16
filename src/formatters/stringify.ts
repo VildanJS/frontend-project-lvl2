@@ -1,7 +1,5 @@
-import { DiffElement } from '../types';
+import { DiffElement, IterElement } from '../types';
 import { isObject, isString } from '../utils';
-
-type IterElement = DiffElement | { [key: string]: DiffElement };
 
 export const stringify = (diffObj: { [key: string]: DiffElement }, replacer = ' ', spacesCount = 2) => {
   const iter = (currentValue: IterElement, depth = 1) => {
