@@ -27,7 +27,7 @@ const renderLine = (key: string, value: any, depth: number, type: keyof typeof P
   const spacer = getIndent(depth);
   return `${spacer}${Prefix[type]} ${key}: ${renderElement(value, depth + 2)}`;
 };
-const stylish = (diffObj: { [key: string]: DiffElement }, depth = 1) => {
+const iter = (diffObj: { [key: string]: DiffElement }, depth = 1) => {
   const spacer = getIndent(depth);
   const plusSpacer = getPlusIndent(depth);
 
@@ -57,7 +57,7 @@ const stylish = (diffObj: { [key: string]: DiffElement }, depth = 1) => {
         break;
       case 'nested':
         if (children) {
-          res.push(`${spacer}  ${key}: {\n${stylish(children, depth + 2)}\n${plusSpacer}}`);
+          res.push(`${spacer}  ${key}: {\n${iter(children, depth + 2)}\n${plusSpacer}}`);
         }
         break;
       default:
@@ -67,5 +67,7 @@ const stylish = (diffObj: { [key: string]: DiffElement }, depth = 1) => {
   });
   return res.join('\n');
 };
+
+const stylish = (diffObj: { [key: string]: DiffElement }) => `{\n${iter(diffObj, 1)}\n}`;
 
 export { stylish };

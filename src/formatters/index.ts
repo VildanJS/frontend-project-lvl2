@@ -13,7 +13,7 @@ export const makeFormat = (data: { [key: string]: DiffElement }, formatter: Form
       res = plain(data);
       break;
     case 'stylish':
-      res = `{\n${stylish(data)}\n}`;
+      res = stylish(data);
       break;
     default:
       res = 'No format defined';
