@@ -21,4 +21,5 @@ function getDiff(filepath1: string, filepath2: string, format: Formatters = 'sty
   const diffObj = getDiffObj(objFromSource1, objFromSource2);
   return makeFormat(diffObj, format);
 }
+
 export default getDiff;

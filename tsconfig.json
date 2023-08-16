@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "types": ["node", "jest"],
-    "target": "ES5",                      // компилировать в es5
+    "target": "ESNext",                      // компилировать в es5
     "moduleResolution": "Node",           // по умолчанию импорт по правилам node
     "module": "CommonJS",                 // правило для модулей
     "strict": true,                       // запрет null и undefined в иерархии типов, и.тд.
