@@ -30,7 +30,6 @@ Then go to the project directory:
 cd frontend-project-lvl2
 ```
 
-## ⚙️ Справка:
 Next, run the command: 
 
 ```bash
@@ -50,7 +49,7 @@ Options:
   -h, --help           output usage information
 ```
 
-## 🚀 Запуск утилиты
+## 🚀 Starting a comparison:
 
 ```bash
 ./bin/gendiff.js ./before.json ./after.json
