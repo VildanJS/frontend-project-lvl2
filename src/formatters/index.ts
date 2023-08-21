@@ -12,6 +12,6 @@ export const makeFormat = (data: { [key: string]: DiffElement }, formatter: Form
     case 'stylish':
       return stylish(data);
     default:
-      throw new Error(`Invalid formatter - ${formatter})`)
+      throw new Error(`Invalid formatter - ${formatter})`);
   }
 };

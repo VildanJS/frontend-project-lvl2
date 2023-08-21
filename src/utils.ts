@@ -6,6 +6,6 @@ const isObject = (yourVariable: any): boolean => typeof yourVariable === 'object
 
 const isString = (yourVariable: any): boolean => typeof yourVariable === 'string';
 
-const getAbsolutePath = (execPath: string) => path.resolve(process.cwd(), execPath)
+const getAbsolutePath = (execPath: string) => path.resolve(process.cwd(), execPath);
 
 export { getAbsolutePath, isObject, isString };
