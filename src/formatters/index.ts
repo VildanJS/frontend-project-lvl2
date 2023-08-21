@@ -4,19 +4,14 @@ import { DiffElement, Formatters } from '../types';
 import { stringify } from './stringify';
 
 export const makeFormat = (data: { [key: string]: DiffElement }, formatter: Formatters) => {
-  let res = '';
   switch (formatter) {
     case 'json':
-      res = stringify(data, ' ', 2);
-      break;
+      return stringify(data, ' ', 2);
     case 'plain':
-      res = plain(data);
-      break;
+      return plain(data);
     case 'stylish':
-      res = stylish(data);
-      break;
+      return stylish(data);
     default:
-      res = 'No format defined';
+      throw new Error(`Invalid formatter - ${formatter})`)
   }
-  return res;
 };

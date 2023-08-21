@@ -4,10 +4,11 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/2aed6a559b72da8789d4/maintainability)](https://codeclimate.com/github/Giridhar108/frontend-project-lvl2/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/2aed6a559b72da8789d4/test_coverage)](https://codeclimate.com/github/Giridhar108/frontend-project-lvl2/test_coverage)
 
+*Read this in other languages: [English](README.ru.md), [Russian](README.ru.md).*
+
 # Учебный проект
 
 ## Проект "Вычислитель отличий"
-## Project "Generate Difference"
 
 Утилита для поиска отличий в конфигурационных файлах.
 

@@ -1,6 +1,4 @@
-import OS from 'os';
 import path from 'path';
-import { cwd } from 'node:process';
 
 const isObject = (yourVariable: any): boolean => typeof yourVariable === 'object'
     && !Array.isArray(yourVariable)
@@ -8,17 +6,6 @@ const isObject = (yourVariable: any): boolean => typeof yourVariable === 'object
 
 const isString = (yourVariable: any): boolean => typeof yourVariable === 'string';
 
-const isPathRelative = (inputPath: string) => inputPath === '.' || inputPath.startsWith('./') || inputPath.startsWith('../');
+const getAbsolutePath = (execPath: string) => path.resolve(process.cwd(), execPath)
 
-function normalizePath(execPath: string) {
-  const splitter = (OS.type() === 'Windows_NT') ? '\\' : '/';
-  const normalizedPath = path
-    .normalize(execPath)
-    .split(splitter)
-    .join('/');
-
-  if (isPathRelative(execPath)) return path.resolve(cwd(), normalizedPath);
-  return normalizedPath;
-}
-
-export { normalizePath, isObject, isString };
+export { getAbsolutePath, isObject, isString };
