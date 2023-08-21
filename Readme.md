@@ -36,7 +36,7 @@ Next, run the command:
 ./bin/gendiff.js -h
 ```
 
-which will display
+Which will display the help
 ```
 Usage: gendiff [options] <firstConfig> <secondConfig>
 
@@ -75,18 +75,17 @@ gendiff ./before.json ./after.json
 
 ## Usage examples
 ### `Stylish`
-
 This formatter will show the whole structure of a file with '+' or '-' signs in each difference case.
-
 Launch command with included fixtures to check it:
+
 [![asciicast](https://asciinema.org/a/380750.svg)](https://asciinema.org/a/380750)
 
 ### `Plain`
-
 This formatter will show each difference case in a single line, discribing the difference.
+
 [![asciicast](https://asciinema.org/a/k56y0xAy95Fzj7pGj9ty90oiN.svg)](https://asciinema.org/a/k56y0xAy95Fzj7pGj9ty90oiN)
 
 ### `JSON`
-
 Sometimes we need the raw tree to check, JSON formatter will show you the difference in JSON format.
+
 [![asciicast](https://asciinema.org/a/m9yMDOx2bLLxAvyPVLQO40ICZ.svg)](https://asciinema.org/a/m9yMDOx2bLLxAvyPVLQO40ICZ)
